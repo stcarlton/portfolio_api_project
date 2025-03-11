@@ -5,3 +5,9 @@ class ImageRequest(BaseModel):
 
 class ImageResponse(BaseModel):
     output_url: str
+
+class GenerateRequest(BaseModel):
+    prompt: str
+
+class GenerateResponse(BaseModel):
+    generated_text: str

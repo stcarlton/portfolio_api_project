@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException
-from app.models.image import ImageRequest, ImageResponse
+from app.models.models import ImageRequest, ImageResponse
 from app.services.caption import label_sketch
 from app.services.replicate import process_icon_from_prompt
 from fastapi import APIRouter, HTTPException
-from app.models.image import ImageRequest, ImageResponse
+from app.models.models import ImageRequest, ImageResponse
 from app.services.openai import edit_image_dalle_from_base64
 from app.services.gpt4o_mini import generate_description_from_image
 from app.services.openai import generate_image_from_prompt

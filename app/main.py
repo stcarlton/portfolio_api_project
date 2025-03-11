@@ -1,10 +1,11 @@
 from fastapi import FastAPI
-from app.routes import image
+from app.routes import image, huggingface, openai
 
 app = FastAPI(title="Portfolio API Project")
 
-# Register image processing routes
 app.include_router(image.router, prefix="/image", tags=["Image Processing"])
+app.include_router(huggingface.router, prefix="/hf")
+app.include_router(openai.router, prefix="/openai")
 
 @app.get("/")
 def root():
